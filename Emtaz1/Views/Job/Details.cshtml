@@ -1,0 +1,42 @@
+﻿@model IEnumerable<BusinessObjectLayer.Data.Job>
+
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<form>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Department.DepName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Jobname)
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Department.DepName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Jobname)
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+</form>
+<div>
+    <a asp-action="Index">Enter new Job</a>
+</div>

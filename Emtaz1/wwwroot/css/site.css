@@ -1,0 +1,75 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+    /*//////////////////*/
+
+
+    body .all {
+        /*font-weight: bold;*/
+        /*background: lightcyan;*/
+        background-image: url('../image/2897016.jpg');
+        width: 100%;
+        height: 700px;
+        background-size: cover;
+    }
+#textn{
+    margin-top:55px;
+}
+#Depart {
+    margin-top:80px;
+    margin-left:10px;
+    border-radius:5px;
+    box-shadow:none;
+    height:38px;
+    width:250px;
+}
+#Depart2 {
+    margin-left: 13px;
+    border-radius: 5px;
+    /*height:35px;*/
+    width: 100px;
+}
+#jobn {
+    border-radius: 4px;
+    height:35px;
+    border: none;
+}
+#jobn2 {
+    margin-top: 0px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    width: 250px;
+    height: 50px;
+    padding:10px;
+   
+}
+#jobn3 {
+    width:120px;
+    height:35px;
+    font-size:15px;
+    margin-top:2px;
+    padding-top:6px;
+}
+/*hhhhhhhhhhhhhhhhhhhhhhhhhhhhh*/
+
+/*hhhhhhhhhhhhhhhhhhhhhhhhhhhh*/
+#seldept{
+    margin-bottom:40px;
+}

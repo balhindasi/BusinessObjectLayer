@@ -1,0 +1,58 @@
+﻿@model BusinessObjectLayer.Data.Department
+@{
+    ViewData["Title"] = "Departments Page";
+}
+
+<style>
+    .button {
+        display: inline-block;
+        border-radius: 4px;
+        background-color: cornflowerblue;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 15px;
+        padding: 20px;
+        width: 220px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+        margin-left: 0px;
+    }
+
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+            .button span:after {
+                content: '\00bb';
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                right: -20px;
+                transition: 0.5s;
+            }
+
+        .button:hover span {
+            padding-right: 25px;
+        }
+
+            .button:hover span:after {
+                opacity: 1;
+                right: 0;
+            }
+</style>
+
+<h1 class="my-5">Departments Page</h1>
+
+<form asp-action="index">
+    <input type="text" id="jobn" asp-for="DepName" placeholder="Enter Department Name" />
+
+    <div class="form-group my-0 py-2">
+        @*<input id="Depart2" type="submit" value="Add" class="btn btn-primary" />*@
+        <button id="jobn3" class="button" style="vertical-align:middle"><span>Add </span></button>
+    </div>
+</form>

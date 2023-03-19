@@ -1,0 +1,70 @@
+﻿@model BusinessObjectLayer.Data.Job
+@{
+    ViewData["Title"] = "Job Page";
+}
+@*hhhh*@
+
+<style>
+    .button {
+        display: inline-block;
+        border-radius: 4px;
+        background-color: cornflowerblue;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 15px;
+        padding: 20px;
+        width: 220px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+        margin-left:0px;
+    }
+
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+            .button span:after {
+                content: '\00bb';
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                right: -20px;
+                transition: 0.5s;
+            }
+
+        .button:hover span {
+            padding-right: 25px;
+        }
+
+            .button:hover span:after {
+                opacity: 1;
+                right: 0;
+            }
+</style>
+
+@*hhh*@
+<h1 class="py-5">Job Page</h1>
+
+<form asp-action="index">
+  
+    <select id="seldept" asp-for="DepartmentId" class="form-control py-2" asp-items="ViewBag.DepartmentId">
+        <option class=" py-2" value="null">- Select Department -</option>
+    </select>
+    <input id="jobn" class="my-2" type="text" asp-for="Jobname" placeholder="Enter Job Name" />
+    <div class="form-group py-1">
+        @*<input type="submit" value="Add" class="btn btn-primary" />*@
+        <button id="jobn3" class="button" style="vertical-align:middle"><span>Add </span></button>
+    </div>
+    <div class="form-group">
+        @*<input id="jobn2" type="submit" value="Show All Jobs Details" style="vertical-align:middle"> class="button btn btn-primary" />*@
+
+        <button id="jobn2" class="button" action="JobId" style="vertical-align:middle"><span>Show All Jobs Details </span></button>
+
+        <a asp-action="DEtails">Enter new Job</a>
+    </div>
+</form>
